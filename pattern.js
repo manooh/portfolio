@@ -7,7 +7,7 @@ var transfo = [
 var zIndex = [30, -20, -10];
 
 $( document ).ready(function() {
-  var strips = 6;
+  var strips = 12;
   var elements = 12;
 
   // draw strips 1
@@ -19,13 +19,16 @@ $( document ).ready(function() {
           $("#pattern").append(elem);
       elem.css('z-index', zIndex[Math.abs(i-strip-1) % zIndex.length]);
       elem.css( 'transform', transfo[0] + ' translate(' + 60*i + 'px, ' + (offY) + 'px)');
+      if (i < (strips - strip -1)) {
+        elem.css('visibility', 'hidden');
+      }
     }
   }
 
   // draw strips 2
   var offY = 0;
   for (strip = 0; strip < strips; strip++) {
-    for (i = 0; i < elements ; i++) {
+    for (i = 0; i < elements - (strips-strip) + 2 ; i++) {
       var elem = $('<div class="p2">2</div>');
           $("#pattern").append(elem);
       elem.css('z-index', zIndex[Math.abs(i-2*strip-1) % zIndex.length]);
@@ -36,7 +39,7 @@ $( document ).ready(function() {
   var offY = 0;
   for (strip = 0; strip < strips; strip++) {
     offY = 52 * strip;
-    for (i = 0; i < elements ; i++) {
+    for (i = 0; i < elements-strip+1 ; i++) {
       var elem = $('<div class="p3">3</div>');
           $("#pattern").append(elem);
       elem.css('z-index', zIndex[Math.abs(i-strip) % zIndex.length]);
