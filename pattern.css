@@ -1,0 +1,66 @@
+    body {
+      margin-top: 160px;
+      margin-left: 160px;
+    }
+
+    .cubes {
+    }
+
+    .set {
+      position: relative;
+      height: 120px;
+
+    }
+    .p1, .p2, .p3 {
+      position: absolute;
+    }
+    .p1, .p2, .p3, .spacer {
+      width: 60px;
+      height: 52px;
+    }
+    .p1 div, .p2 div, .p3 div {
+      padding: 5px;
+    }
+
+    .p1 {
+      transform: rotate(30deg) skewX(30deg);
+      margin-left:-8px;
+      background: rgba(255, 255, 0, 0.8);
+    }
+
+    .p2 {
+      transform: rotate(-30deg) skewX(-30deg);
+      margin-left:-8px;
+      background: rgba(0, 255, 0, 0.8);
+    }
+
+    .p3 {
+      transform: rotate(-30deg) skewX(30deg);
+      margin-left:-86px;
+      margin-top: -45px;
+      background: rgba(255, 0, 0, 0.8);
+    }
+
+    .center  {
+      position: absolute;
+    }
+    .top {
+      position: absolute;
+    }
+/*
+    .row2  {
+      position: absolute;
+      top: 30px;
+      left: -52px;
+    }
+
+    .row3  {
+      position: absolute;
+      top: -30px;
+      left: 52px;
+    }
+*/
+    .spacer {
+      width: 52px;
+      background-color: white;
+    }
