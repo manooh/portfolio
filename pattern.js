@@ -1,25 +1,30 @@
-var transfo = [
-  'rotate( 30deg) skewX( 30deg)',
-  'rotate(-30deg) skewX(-30deg)',
-  'rotate(-30deg) skewX( 30deg)'
-];
-
-var zIndex = [30, -20, -10];
-
 $( document ).ready(function() {
+  drawWeave();
+});
+
+function drawWeave() {
+  var transfo = [
+    'rotate( 30deg) skewX( 30deg)',
+    'rotate(-30deg) skewX(-30deg)',
+    'rotate(-30deg) skewX( 30deg)'
+  ];
+
+  var zIndex = [30, 20, 10];
+
   var strips = 12;
   var elements = 12;
 
   // draw strips 1
   var offY = 0;
   for (strip = 0; strip < strips; strip++) {
-    offY = 52 * strip;
+    offY = 52 * (strip);
     for (i = 0; i < elements ; i++) {
       var elem = $('<div class="p1">1</div>');
           $("#pattern").append(elem);
-      elem.css('z-index', zIndex[Math.abs(i-strip-1) % zIndex.length]);
-      elem.css( 'transform', transfo[0] + ' translate(' + 60*i + 'px, ' + (offY) + 'px)');
-      if (i < (strips - strip -1)) {
+      elem.css('z-index', zIndex[Math.abs(i-strip-2) % zIndex.length]);
+      //alert('translate(0px ' +60*strip + 'px) ');
+      elem.css('transform', 'translate(0px, ' +60 + 'px) ' + transfo[0] + ' translate(' + 60*i + 'px, ' + (offY) + 'px)');
+      if (i < (strips - strip - 2)) {
         elem.css('visibility', 'hidden');
       }
     }
@@ -46,4 +51,4 @@ $( document ).ready(function() {
       elem.css( 'transform', 'translate(52px, ' + (30+ 60*strips) + 'px) ' + transfo[2] + ' translate(' + (60*i) + 'px, ' + (offY) + 'px)');
     }
   }
-});
+}
