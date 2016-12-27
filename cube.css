@@ -1,0 +1,124 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
+  background-color: #CCC;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+/*  animation-name: spin;
+  animation-duration: 9000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;*/
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.descriptions {
+  width: 68vmin;
+  height: 68vmin;
+  position: relative;
+}
+
+.desc {
+  position: absolute;
+  font-family: 'Leckerli One', cursive;
+  font-size: 5vmin;
+  width: 100%;
+  text-align: center;
+  min-height: 50%;
+  transform-origin: center bottom;
+}
+
+.d1 {
+  transform: rotate(60deg);
+}
+
+.d2 {
+  transform: rotate(180deg);
+}
+
+.d3 {
+  transform: rotate(300deg);
+}
+
+.cube {
+  width: 50vmin;
+  height: 50vmin;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 5px black;
+  box-sizing: border-box;
+}
+
+.sides {
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+.side1, .side2, .side3, .side4, .side5, .side6 {
+  position: absolute;
+  min-width: 50%;
+  min-height: 43.3%;
+  width: 50%;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: left bottom;
+  transform: skewX(30deg);
+  box-sizing: border-box;
+  border: 2px solid white;
+}
+
+.side1 {
+  background-color: rgba(255, 0, 0, 0.5);
+  transform: rotate(30deg) skewX(30deg);
+}
+
+.side2 {
+  background-color: rgba(0, 255, 0, 0.5);
+  transform: rotate(150deg) skewX(30deg);
+}
+
+.side3 {
+  background-color: rgba(0, 0, 255, 0.5);
+  transform: rotate(270deg) skewX(30deg);
+}
+
+.side4 { /* orchid */
+  background-color: rgba(218, 112, 214, 0.8);
+  transform: rotate(90deg) skewX(30deg);
+}
+
+.side5 { /* mediumorchid */
+  background-color: rgba(186, 85, 211, 0.8);
+  transform: rotate(210deg) skewX(30deg);
+}
+
+.side6 { /* darkorchid */
+  background-color: rgba(153, 50, 204, 0.8);
+  transform: rotate(330deg) skewX(30deg);
+}
+
