@@ -1,5 +1,7 @@
 $( document ).ready(function() {
   drawWeave();
+  //$('#pattern').css('transform', 'rotate(330deg)');
+  $('#pattern').css('border', '1px solid black');
 });
 
 function drawWeave() {
