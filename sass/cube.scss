@@ -17,29 +17,28 @@ a {
   display:inline-block;
   font-size:14px;
   font-weight:900;
-}
-.nav-list {
 
-}
-.nav-item {
-  float:left;
-  *display:inline;
-  zoom:1;
-}
-.nav-item a {
-  display:block;
-  padding:15px 20px;
-  color:#FFF;
-  background:#34495E;
-}
-.nav-item:first-child a {
-  border-radius:5px 0 0 5px;
-}
-.nav-item:last-child a {
-  border-radius:0 5px 5px 0;
-}
-.nav-item a:hover {
-  background:#2C3E50;
+  .nav-item {
+    float:left;
+    *display:inline;
+    zoom:1;
+
+    a:hover {
+      background:#2C3E50;
+    }
+  }
+  a {
+    display:block;
+    padding:15px 20px;
+    color:#FFF;
+    background:#34495E;
+  }
+  &:first-child a {
+    border-radius:5px 0 0 5px;
+  }
+  &:last-child a {
+    border-radius:0 5px 5px 0;
+  }
 }
 
 .centered {
@@ -53,9 +52,7 @@ a {
   position: relative;
   width: 68vmin;
   height: 68vmin;
-}
 
-.container {
   animation-name: spin;
   animation-duration: 500s;
   animation-iteration-count: infinite;
