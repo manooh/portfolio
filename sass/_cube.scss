@@ -1,17 +1,3 @@
-html {
-  height: 100%;
-}
-body {
-  min-height: 100%;
-  position: relative;
-  background-color: #CCC;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-}
-
 .centered {
   position: absolute;
   top: 50%;
@@ -21,8 +7,8 @@ a {
 
 .container {
   position: relative;
-  width: 68vmin;
-  height: 68vmin;
+  width:  $d-main-width;
+  height: $d-main-width;
 
   animation-name: spin;
   animation-duration: 500s;
@@ -40,15 +26,15 @@ a {
 }
 
 .descriptions {
-  width: 68vmin;
-  height: 68vmin;
+  width:    $d-main-width;
+  height:   $d-main-width;
   position: absolute;
 }
 
 .desc {
   position: absolute;
-  font-family: 'Leckerli One', cursive;
-  font-size: 5vmin;
+  font-family: $f-heading;
+  font-size:   5vmin;
   width: 100%;
   text-align: center;
   min-height: 50%;
@@ -68,10 +54,10 @@ a {
 }
 
 .cube {
-  width: 50vmin;
-  height: 50vmin;
+  width:  $d-main-cube;
+  height: $d-main-cube;
   position: absolute;
-  top: 50%;
+  top:  50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -87,51 +73,51 @@ a {
 }
 
 .sides {
-  min-width: 100%;
+  min-width:  100%;
   min-height: 100%;
-  position: relative;
+  position:   relative;
 }
 
 .side1, .side2, .side3, .side4, .side5, .side6 {
   position: absolute;
   min-width: 50%;
-  min-height: 43.3%;
+  min-height: 43.3%; // sin(60deg)/2
   width: 50%;
   bottom: 50%;
   left: 50%;
   transform-origin: left bottom;
   transform: skewX(30deg);
-  box-sizing: border-box;
+  box-sizing: border-box; // border inside
   border: 2px solid white;
 }
 
 .side1 {
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(red, $alpha-back);
   transform: rotate(30deg) skewX(30deg);
 }
 
 .side2 {
-  background-color: rgba(0, 255, 0, 0.5);
+  background-color: rgba(green, $alpha-back);
   transform: rotate(150deg) skewX(30deg);
 }
 
 .side3 {
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(blue, $alpha-back);
   transform: rotate(270deg) skewX(30deg);
 }
 
-.side4 { /* orchid */
-  background-color: rgba(218, 112, 214, 0.8);
+.side4 {
+  background-color: rgba($c-orchid, $alpha-front);
   transform: rotate(90deg) skewX(30deg);
 }
 
-.side5 { /* mediumorchid */
-  background-color: rgba(186, 85, 211, 0.8);
+.side5 {
+  background-color: rgba($c-mediumorchid, $alpha-front);
   transform: rotate(210deg) skewX(30deg);
 }
 
-.side6 { /* darkorchid */
-  background-color: rgba(153, 50, 204, 0.8);
+.side6 {
+  background-color: rgba($c-darkorchid, $alpha-front);
   transform: rotate(330deg) skewX(30deg);
 }
 

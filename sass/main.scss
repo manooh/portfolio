@@ -1,3 +1,18 @@
 @import '_variables';
 @import '_menu';
 @import '_cube';
+
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  position:   relative;
+  background-color: $c-background;
+}
+
+a {
+  color: $c-link;
+  text-decoration: none;
+}

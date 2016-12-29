@@ -1,15 +1,16 @@
 .nav {
-  position:absolute;
-  bottom: 0px;
-  width: 50vmin;
-  display:inline-block;
-  font-size:14px;
-  font-weight:900;
+  position:  absolute;
+  bottom:    1em;
+  left:      50%;
+  transform: translate(-50%, 0);
+  width:     $d-main-width;
+  display:   inline-block;
+  font-size: 14px;
+  border: 1px solid green;
 
   .nav-item {
     float:left;
-    *display:inline;
-    zoom:1;
+    display:inline;
 
     a:hover {
       background:#2C3E50;
@@ -20,11 +21,5 @@
     padding:15px 20px;
     color:#FFF;
     background:#34495E;
-  }
-  &:first-child a {
-    border-radius:5px 0 0 5px;
-  }
-  &:last-child a {
-    border-radius:0 5px 5px 0;
   }
 }
