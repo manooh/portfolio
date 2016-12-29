@@ -1,0 +1,22 @@
+.nav {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 900; }
+  .nav .nav-item {
+    float: left;
+    *display: inline;
+    zoom: 1; }
+    .nav .nav-item a:hover {
+      background: #2C3E50; }
+  .nav a {
+    display: block;
+    padding: 15px 20px;
+    color: #FFF;
+    background: #34495E; }
+  .nav:first-child a {
+    border-radius: 5px 0 0 5px; }
+  .nav:last-child a {
+    border-radius: 0 5px 5px 0; }
+
+/*# sourceMappingURL=menu.css.map */
