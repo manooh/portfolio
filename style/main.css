@@ -1,3 +1,26 @@
+.nav {
+  position: absolute;
+  bottom: 0px;
+  width: 50vmin;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 900; }
+  .nav .nav-item {
+    float: left;
+    *display: inline;
+    zoom: 1; }
+    .nav .nav-item a:hover {
+      background: #2C3E50; }
+  .nav a {
+    display: block;
+    padding: 15px 20px;
+    color: #FFF;
+    background: #34495E; }
+  .nav:first-child a {
+    border-radius: 5px 0 0 5px; }
+  .nav:last-child a {
+    border-radius: 0 5px 5px 0; }
+
 html {
   height: 100%; }
 
@@ -114,4 +137,4 @@ a {
   background-color: rgba(153, 50, 204, 0.8);
   transform: rotate(330deg) skewX(30deg); }
 
-/*# sourceMappingURL=cube.css.map */
+/*# sourceMappingURL=main.css.map */
