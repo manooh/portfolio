@@ -1,6 +1,6 @@
 .centered {
   position: absolute;
-  top: 50%;
+  top: calc(50% - #{$d-nav-item} - #{$d-nav-item-pad});
   left: 50%;
   transform: translate(-50%, -50%);
 }

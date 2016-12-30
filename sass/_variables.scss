@@ -8,13 +8,15 @@ $c-link:       black;
 
 
 /////// Dimensions
-$d-main-width: 68vmin;
-$d-main-cube:  50vmin;
-
+$d-main-width:  68vmin;
+$d-main-cube:   50vmin;
+$d-nav-item:     9vmin;
+$d-nav-item-pad: 2vmin;
 
 /////// Fonts
 $f-heading: 'Leckerli One', cursive;
-
+$f-main:    'PT Sans', sans-serif;
+$f-menu:    'PT Sans Narrow', sans-serif;
 
 ///// CUBE
 $alpha-front: 0.8;
