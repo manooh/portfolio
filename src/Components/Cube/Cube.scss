@@ -1,3 +1,6 @@
+@import '../../Global/_variables';
+
+
 .centered {
   position: absolute;
   top: calc(50% - #{$d-nav-item} - #{$d-nav-item-pad});

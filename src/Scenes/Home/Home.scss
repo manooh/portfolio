@@ -1,0 +1,19 @@
+@import '../../Global/_googlefonts';
+@import '../../Global/_variables';
+
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height:       100%;
+  position:         relative;
+  background-color: $c-background;
+  font-family:      $f-main;
+}
+
+a {
+  color:           $c-link;
+  text-decoration: none;
+}

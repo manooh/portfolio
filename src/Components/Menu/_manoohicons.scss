@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'manoohicons';
-  src: url('../font/Manooh_Icons/manoohicons.eot?47717386');
-  src: url('../font/Manooh_Icons/manoohicons.eot?47717386#iefix') format('embedded-opentype'),
-       url('../font/Manooh_Icons/manoohicons.woff2?47717386') format('woff2'),
-       url('../font/Manooh_Icons/manoohicons.woff?47717386') format('woff'),
-       url('../font/Manooh_Icons/manoohicons.ttf?47717386') format('truetype'),
-       url('../font/Manooh_Icons/manoohicons.svg?47717386#manoohicons') format('svg');
+  src: url('./Manooh_Icons/manoohicons.eot?47717386');
+  src: url('./Manooh_Icons/manoohicons.eot?47717386#iefix') format('embedded-opentype'),
+       url('./Manooh_Icons/manoohicons.woff2?47717386') format('woff2'),
+       url('./Manooh_Icons/manoohicons.woff?47717386') format('woff'),
+       url('./Manooh_Icons/manoohicons.ttf?47717386') format('truetype'),
+       url('./Manooh_Icons/manoohicons.svg?47717386#manoohicons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'manoohicons';
-    src: url('../font/manoohicons.svg?47717386#manoohicons') format('svg');
+    src: url('./Manooh_Icons/manoohicons.svg?47717386#manoohicons') format('svg');
   }
 }
 */

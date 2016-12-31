@@ -1,0 +1,6 @@
+How to structure project:
+https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1#.9lddhkz8y
+
+Using Sass with create-react-app
+https://medium.com/@Connorelsea/using-sass-with-create-react-app-7125d6913760#.p3536e9so
+
