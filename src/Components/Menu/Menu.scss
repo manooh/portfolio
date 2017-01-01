@@ -56,12 +56,14 @@
 
         &:first-child { // icon
           font-size: 3vmin;
+          color: rgba(255, 255, 255, 0.75);
         }
 
         &:last-child { // text
           font-family: $f-menu;
           font-weight: bold;
           font-size: 1.5vmin;
+          color: black;
         }
       }
     }
