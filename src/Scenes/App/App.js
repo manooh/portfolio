@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './Home.scss';
+import './App.scss';
 
 import Cube from '../../Components/Cube/Cube';
 import Menu from '../../Components/Menu/Menu';
 
 
-class Home extends Component {
+class App extends Component {
   render() {
     return (
-      <div className="Home">
+      <div className="app">
         <Menu />
         <Cube />
       </div>
@@ -16,4 +16,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default App;
