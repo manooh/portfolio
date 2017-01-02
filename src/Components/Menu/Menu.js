@@ -3,16 +3,13 @@ import React, { Component, PropTypes } from 'react';
 import './Menu.scss';
 
 class Menu extends Component {
-  setPage(page) {
-    this.props.setPage(page);
-  }
 
   render() {
     return (
       <nav className="nav">
         <ul className="nav-list">
           <li href='#' className={'nav-item ' + ('Home' === this.props.currentPage ? 'selected' : '')}>
-            <a onClick={this.setPage.bind(this, 'Home')}>
+            <a onClick={() => this.props.setPage('Home')}>
               <span className="icon-home"></span>
               <span>Home</span>
             </a>
@@ -22,7 +19,7 @@ class Menu extends Component {
             let iconName = 'icon-'+infoPage.toLowerCase();
             return (
               <li className={'nav-item ' + (infoPage === this.props.currentPage ? 'selected' : '')} key={infoPage} >
-                <a href={'#' + infoPage} onClick={this.setPage.bind(this, infoPage)}>
+                <a href={'#' + infoPage} onClick={() => this.props.setPage(infoPage)}>
                   <span className={iconName}></span>
                   <span>{infoPage}</span>
                 </a>
@@ -31,7 +28,7 @@ class Menu extends Component {
           })}
 
           <li className={'nav-item ' + ('Mail' === this.props.currentPage ? 'selected' : '')}>
-            <a href='#mail' onClick={this.setPage.bind(this, 'Mail')}>
+            <a href='#mail' onClick={() => this.props.setPage( 'Mail')}>
               <span className="icon-mail"></span>
               <span>Contact</span>
             </a>
