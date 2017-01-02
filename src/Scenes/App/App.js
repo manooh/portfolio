@@ -15,7 +15,7 @@ const Home = () => {
 
 const Mail = () => {
   return (
-    <div>Mail</div>
+    <div id="Mail">Mail</div>
   );
 };
 
@@ -56,6 +56,7 @@ class App extends Component {
 
   updateID() {
     this.setState({ currentPage: this.getValidID() });
+    scroll(0,0);
   }
 
   setPage(page) {

@@ -1,18 +1,23 @@
 @import '../../Global/_variables';
 @import './_manoohicons';
 
-.nav {
+.nav-container {
   position:  fixed;
-  bottom:    2px;
+  bottom:    0;
   left:      50%;
   transform: translate(-50%, 0);
-  display:   inline-block;
+  width: 100vw;
+  padding-top: 2vh;
+  background-color: #999;
+  text-align: center;
   z-index:    100;
+}
+.nav {
+  display:   inline-block;
   background-color: black;
-  padding: 0;
   border-radius: $d-nav-item-pad;
-  margin-bottom: -$d-nav-item-pad;
-  padding-bottom: $d-nav-item-pad;
+  margin-bottom: calc(-2*#{$d-nav-item-pad});
+  padding-bottom: calc(2*#{$d-nav-item-pad});
   border: 4px solid #fff;
   box-shadow: 0 0 0 5px black;
   box-sizing: border-box;
