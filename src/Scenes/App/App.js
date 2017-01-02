@@ -59,7 +59,7 @@ class App extends Component {
   }
 
   getValidID() {
-    const validIDs = ['Home', 'Developer', 'Designer', 'Teacher', 'More', 'Mail'];
+    const validIDs = Object.keys(InfoPages).concat(['Home', 'Mail']);
 
     let id = location.hash.slice(1);
     if ('' !== id) {
