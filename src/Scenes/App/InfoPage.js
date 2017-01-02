@@ -31,7 +31,9 @@ class InfoPage extends Component {
   render() {
     return(
       <div className='info-page'>
-        {this.props.children}
+        <div className='info-page-content'>
+          {this.props.children}
+        </div>
       </div>
     )
   }
