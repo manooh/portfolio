@@ -50,6 +50,12 @@ class App extends Component {
     this.state = {
       currentPage: this.getValidID()
     };
+
+    window.addEventListener('popstate', this.updateID.bind(this));
+  }
+
+  updateID() {
+    this.setState({ currentPage: this.getValidID() });
   }
 
   setPage(page) {
@@ -57,7 +63,7 @@ class App extends Component {
   }
 
   getValidID() {
-    const validIDs = Object.keys(InfoPages).concat(['Home', 'Mail']);
+    const validIDs = ['Home', 'Mail'].concat(Object.keys(InfoPages));
 
     let id = location.hash.slice(1);
     if ('' !== id) {
@@ -67,6 +73,7 @@ class App extends Component {
           return id;
       }
     }
+    location.hash = '#Home';
     return 'Home';
   }
 

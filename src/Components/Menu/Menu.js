@@ -9,7 +9,7 @@ class Menu extends Component {
       <nav className="nav">
         <ul className="nav-list">
           <li href='#' className={'nav-item ' + ('Home' === this.props.currentPage ? 'selected' : '')}>
-            <a onClick={() => this.props.setPage('Home')}>
+            <a href="#Home">
               <span className="icon-home"></span>
               <span>Home</span>
             </a>
@@ -19,7 +19,7 @@ class Menu extends Component {
             let iconName = 'icon-'+infoPage.toLowerCase();
             return (
               <li className={'nav-item ' + (infoPage === this.props.currentPage ? 'selected' : '')} key={infoPage} >
-                <a href={'#' + infoPage} onClick={() => this.props.setPage(infoPage)}>
+                <a href={'#' + infoPage}>
                   <span className={iconName}></span>
                   <span>{infoPage}</span>
                 </a>
@@ -28,7 +28,7 @@ class Menu extends Component {
           })}
 
           <li className={'nav-item ' + ('Mail' === this.props.currentPage ? 'selected' : '')}>
-            <a href='#mail' onClick={() => this.props.setPage( 'Mail')}>
+            <a href='#Mail'>
               <span className="icon-mail"></span>
               <span>Contact</span>
             </a>
