@@ -1,32 +1,32 @@
 import React, { Component } from 'react';
-import './InfoPage.scss';
+import './InfoPages.scss';
 
-export const Developer = () => {
+const Developer = () => {
   return (
     <div>Developer</div>
   );
 };
 
-export const Designer = () => {
+const Designer = () => {
   return (
     <div>Designer</div>
   );
 };
 
-export const Teacher = () => {
+const Teacher = () => {
   return (
     <div>Teacher</div>
   );
 };
 
-export const More = () => {
+const More = () => {
   return (
     <div>More</div>
   );
 };
 
 
-class InfoPage extends Component {
+export class InfoPage extends Component {
 
   render() {
     return(
@@ -39,4 +39,5 @@ class InfoPage extends Component {
   }
 };
 
-export default InfoPage;
+const InfoPages = { Developer, Designer, Teacher, More };
+export default InfoPages;

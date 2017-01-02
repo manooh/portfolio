@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import './App.scss';
 
-import InfoPage, { Developer, Designer, Teacher, More } from './InfoPage';
+import InfoPages, {InfoPage} from './InfoPages';
 import Cube from '../../Components/Cube/Cube';
 import Menu from '../../Components/Menu/Menu';
 
@@ -40,8 +40,6 @@ PageContainer.defaultProps = {
   isSelected: false
 };
 
-
-const InfoPages = { Developer, Designer, Teacher, More };
 
 class App extends Component {
   constructor(props) {
