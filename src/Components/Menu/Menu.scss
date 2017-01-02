@@ -67,5 +67,13 @@
         }
       }
     }
+    &.selected {
+      a {
+        background-color: white;
+        span:first-child {
+          color: rgba(0, 0, 0, 0.75);
+        }
+      }
+    }
   }
 }

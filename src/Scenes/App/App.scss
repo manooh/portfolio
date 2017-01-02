@@ -18,3 +18,11 @@ a {
   color:           $c-link;
   text-decoration: none;
 }
+
+.page-container {
+  display:none;
+}
+
+.page-container.selected {
+  display:inherit;
+}

@@ -1,21 +1,50 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+
 import './Menu.scss';
 
 class Menu extends Component {
+  setPage(page) {
+    this.props.setPage(page);
+  }
+
   render() {
     return (
       <nav className="nav">
         <ul className="nav-list">
-          <li className="nav-item"><a href="#"><span className="icon-home"></span><span>Home</span></a></li>
-          <li className="nav-item"><a href="#"><span className="icon-developer"></span><span>Programmer</span></a></li>
-          <li className="nav-item"><a href="#"><span className="icon-designer"></span><span>UX&nbsp;Designer</span></a></li>
-          <li className="nav-item"><a href="#"><span className="icon-teacher"></span><span>Teacher</span></a></li>
-          <li className="nav-item"><a href="#"><span className="icon-more"></span><span>And&nbsp;more!</span></a></li>
-          <li className="nav-item"><a href="#"><span className="icon-mail"></span><span>Contact</span></a></li>
+          <li className={'nav-item ' + ('Home' === this.props.currentPage ? 'selected' : '')}>
+            <a onClick={this.setPage.bind(this, 'Home')}>
+              <span className="icon-home"></span>
+              <span>Home</span>
+            </a>
+          </li>
+
+          {Object.keys(this.props.infoPages).map((infoPage) => {
+            let iconName = 'icon-'+infoPage.toLowerCase();
+            return (
+              <li className={'nav-item ' + (infoPage === this.props.currentPage ? 'selected' : '')} key={infoPage} >
+                <a onClick={this.setPage.bind(this, infoPage)}>
+                  <span className={iconName}></span>
+                  <span>{infoPage}</span>
+                </a>
+              </li>
+            );
+          })}
+
+          <li className={'nav-item ' + ('Mail' === this.props.currentPage ? 'selected' : '')}>
+            <a onClick={this.setPage.bind(this, 'Mail')}>
+              <span className="icon-mail"></span>
+              <span>Contact</span>
+            </a>
+          </li>
         </ul>
       </nav>
     );
   }
 }
+Menu.propTypes = {
+  infoPages:   PropTypes.object.isRequired,
+  currentPage: PropTypes.string.isRequired,
+  setPage:     PropTypes.func.isRequired
+};
 
 export default Menu;
