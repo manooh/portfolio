@@ -50,12 +50,26 @@ class App extends Component {
     this.setPage = this.setPage.bind(this);
 
     this.state = {
-      currentPage: 'Home'
+      currentPage: this.getValidID()
     };
   }
 
   setPage(page) {
     this.setState({ currentPage: page });
+  }
+
+  getValidID() {
+    const validIDs = ['Home', 'Developer', 'Designer', 'Teacher', 'More', 'Mail'];
+
+    let id = location.hash.slice(1);
+    if ('' !== id) {
+      id = id.charAt(0).toUpperCase() + id.toLowerCase().slice(1); // capitalize first
+      for (var i = 0; i < validIDs.length; i++) {
+        if (validIDs[i] === id)
+          return id;
+      }
+    }
+    return 'Home';
   }
 
   render() {

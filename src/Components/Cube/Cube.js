@@ -7,9 +7,9 @@ class Cube extends Component {
       <div className="centered">
         <div className="container">
           <div className="descriptions">
-            <div className="desc d1"><a href="#ux">UX Designer</a></div>
-            <div className="desc d2"><a href="#teach">Teacher</a></div>
-            <div className="desc d3"><a href="#dev">Programmer</a></div>
+            <div className="desc d1"><a href="#Designer">UX Designer</a></div>
+            <div className="desc d2"><a href="#Teacher">Teacher</a></div>
+            <div className="desc d3"><a href="#Developer">Programmer</a></div>
           </div>
 
           <div className="cube">

@@ -11,7 +11,7 @@ class Menu extends Component {
     return (
       <nav className="nav">
         <ul className="nav-list">
-          <li className={'nav-item ' + ('Home' === this.props.currentPage ? 'selected' : '')}>
+          <li href='#' className={'nav-item ' + ('Home' === this.props.currentPage ? 'selected' : '')}>
             <a onClick={this.setPage.bind(this, 'Home')}>
               <span className="icon-home"></span>
               <span>Home</span>
@@ -22,7 +22,7 @@ class Menu extends Component {
             let iconName = 'icon-'+infoPage.toLowerCase();
             return (
               <li className={'nav-item ' + (infoPage === this.props.currentPage ? 'selected' : '')} key={infoPage} >
-                <a onClick={this.setPage.bind(this, infoPage)}>
+                <a href={'#' + infoPage} onClick={this.setPage.bind(this, infoPage)}>
                   <span className={iconName}></span>
                   <span>{infoPage}</span>
                 </a>
@@ -31,7 +31,7 @@ class Menu extends Component {
           })}
 
           <li className={'nav-item ' + ('Mail' === this.props.currentPage ? 'selected' : '')}>
-            <a onClick={this.setPage.bind(this, 'Mail')}>
+            <a href='#mail' onClick={this.setPage.bind(this, 'Mail')}>
               <span className="icon-mail"></span>
               <span>Contact</span>
             </a>
