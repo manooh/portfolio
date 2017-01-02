@@ -4,6 +4,7 @@ import './App.scss';
 import InfoPages, {InfoPage} from './InfoPages';
 import Cube from '../../Components/Cube/Cube';
 import Menu from '../../Components/Menu/Menu';
+import NameBackground from '../../Components/NameBackground/NameBackground';
 
 
 const Home = () => {
@@ -81,6 +82,8 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <NameBackground/>
+
         {/* Menu */}
         <Menu infoPages={InfoPages} currentPage={this.state.currentPage} setPage={this.setPage}/>
 

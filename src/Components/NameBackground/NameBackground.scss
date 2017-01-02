@@ -1,0 +1,62 @@
+@import '../../Global/_variables';
+
+.name-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index: -100;
+  font-size: 10vmin;
+  font-family: cursive;
+  color: #BBB;
+  font-family: $f-heading;
+}
+
+.fade {
+  animation: fadeinout 40s ease infinite;
+  position: absolute;
+}
+
+@keyframes fadeinout {
+  0%, 70%, 100% { opacity: 0; }
+  30% { opacity: 1; }
+}
+
+.f1 {
+  top: 0;
+  left: 0;
+}
+
+.f2 {
+  animation-duration: 22s;
+  top: 10%;
+  right: 0;
+}
+
+.f3 {
+  animation-duration: 30s;
+  top: 30%;
+  left: 10%;
+}
+
+.f4 {
+  animation-duration: 25s;
+  top: 70%;
+  left: 80%;
+}
+
+.f5 {
+  animation-duration: 40s;
+  top: 50%;
+  left: 50%;
+}
+
+.f6 {
+  animation-duration: 37s;
+  top: 60%;
+  left: 1vmin;
+}
+
