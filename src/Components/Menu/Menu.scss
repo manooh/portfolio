@@ -24,6 +24,16 @@
   min-width: $d-main-width;
   text-align: center;
 
+  .name {
+    color: white;
+    font-family: $f-menu;
+    font-size: 2vw;
+    padding-top: 1vw;
+    padding-bottom: .5em;
+  }
+  .nav-list {
+    margin-top: 0;
+  }
   .nav-item {
     float:left;
     display:inline-block;
