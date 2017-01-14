@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import Mailto from 'react-mailto';
+
 import './App.scss';
 
 import InfoPages, {InfoPage} from './InfoPages';
@@ -16,7 +18,23 @@ const Home = () => {
 
 const Mail = () => {
   return (
-    <div id="Mail">Mail</div>
+    <div id="Mail">
+      <h1>Contact</h1>
+      <dl>
+        <dt>Mail</dt>
+        <dd>
+          <Mailto email="manu@manooh.com" obfuscate>
+            manu (at) manooh (dot) com
+          </Mailto>
+        </dd>
+        <dt>Github</dt>
+        <dd><a href="https://github.com/manooh">github.com/manooh</a></dd>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/manuelahutter">linkedin.com/in/manuelahutter</a></dd>
+        <dt>Xing</dt>
+        <dd><a href="https://www.xing.com/profile/Manuela_Hutter">xing.com/profile/Manuela_Hutter</a></dd>
+      </dl>
+    </div>
   );
 };
 

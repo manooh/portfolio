@@ -27,3 +27,19 @@ a {
 .page-container.selected {
   display:inherit;
 }
+
+dt {
+  float: left;
+  clear: left;
+  width: 20%;
+  text-align: right;
+  font-weight: bold;
+  color: green;
+}
+dt:after {
+  content: ":";
+}
+dd {
+  margin: 0 0 0 22%;
+  text-align: left;
+}
